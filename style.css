@@ -13,8 +13,39 @@ html, body {
 nav ul li{
     list-style: none;
     padding: 0 12px;
+    display: inline-block;
 }
 .right input{
-    padding: auto;
-    margin: auto 200px;
+    padding: auto 50px;
+    margin: auto 70px;
+    width: 300px;
+}
+.containers {
+    box-shadow: 0 4px 8px rgba(196, 6, 6, 0.1);
+}
+.right input {
+    height: 27px;
+    padding: auto 50px;
+    margin: auto 70px;
+    width: 300px;
+    border-radius: 2px; /* Makes the input rounded */
+    border: none;
+    background-color: rgb(223, 245, 236);
+}
+
+.right input:focus {
+    background-color: #f0f5f4d8; /* Change to your desired color */
+    outline: none;             /* Optional: removes default outline */
+}
+.mx-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Aligns items vertically */
+    cursor: pointer; /* Makes it clickable */
+}
+.mx-2 img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; /* Space between image and text */
+    margin-bottom: 2px;
 }
