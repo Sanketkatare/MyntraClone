@@ -9,6 +9,7 @@
     justify-content: center;
 }
 .semibold{
+    cursor: pointer;
     font-weight: bolder;
 }
 .mx-2{
