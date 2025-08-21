@@ -52,7 +52,8 @@ nav ul li{
 .slide {
     display: none;
     width: 100%;
-    height: 300px;
+    height: 350px;
+    margin-top: 30px;
     object-fit: cover;
 }
 

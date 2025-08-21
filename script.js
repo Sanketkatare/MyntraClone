@@ -26,4 +26,4 @@ showSlide(currentSlide);
 setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-}, 3000); // Change slide every 3 seconds
+}, 5000); // Change slide every 3 seconds
