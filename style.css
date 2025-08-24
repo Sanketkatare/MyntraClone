@@ -22,6 +22,10 @@ nav ul li{
 }
 .containers {
     box-shadow: 0 4px 8px rgba(196, 6, 6, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures header stays above other content */
+    background: #fff; /* Prevents transparency when scrolling */
 }
 .right input {
     height: 27px;
@@ -71,7 +75,7 @@ nav ul li{
     /* letter-spacing: 1ex; */
 }
 
-.kids-section {
+.section-1{
     overflow: hidden;
     position: relative;
     width: 100%;

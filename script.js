@@ -25,3 +25,4 @@ slider.addEventListener('mouseenter', stopSlider);
 slider.addEventListener('mouseleave', startSlider);
 
 startSlider();
+
