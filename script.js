@@ -1,20 +1,7 @@
-// let currentSlide = 0;
-// const slides = document.querySelectorAll('.slide'); 
-
-// function showSlide(index) {
-//     slides.forEach((slide, i) => {
-//         slide.classList.toggle('active', i === index);
-//     });
-// }
-// showSlide(currentSlide);
-
-// setInterval(() => {
-//     currentSlide = (currentSlide + 1) % slides.length;
-//     showSlide(currentSlide);
-// }, 2000); // Change slide every 3 seconds
-
 let currentSlide = 0;
-const slides = document.querySelectorAll('.slide'); 
+const slides = document.querySelectorAll('.slide');
+const slider = document.querySelector('.slider');
+let intervalId;
 
 function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -23,7 +10,18 @@ function showSlide(index) {
 }
 showSlide(currentSlide);
 
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}, 5000); // Change slide every 3 seconds
+function startSlider() {
+    intervalId = setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 3000);
+}
+
+function stopSlider() {
+    clearInterval(intervalId);
+}
+
+slider.addEventListener('mouseenter', stopSlider);
+slider.addEventListener('mouseleave', startSlider);
+
+startSlider();
